@@ -85,21 +85,21 @@ void ShopTracker::showMenu() {
                 string item;
                 cin >> item;
                 int frequency = getFrequency(item);
-                cout << "The item \"" << item << "\" appears " << frequency << " times." << endl;
+                cout << "\nThe item \"" << item << "\" appears " << frequency << " times." << endl;
                 break;
             }
             case 2: {
-                cout << "All items and their frequencies:" << endl;
+                cout << "\nAll items and their frequencies:" << endl;
                 displayAllItems();
                 break;
             }
             case 3: {
-                cout << "Histogram of item frequencies:" << endl;
+                cout << "\nHistogram of item frequencies:" << endl;
                 displayHistogram();
                 break;
             }
             case 4: {
-                cout << "Exiting the program." << endl;
+                cout << "\nExiting the program." << endl;
                 break;
             }
             default:
