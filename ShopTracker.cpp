@@ -1,3 +1,6 @@
+// Name: Carlos Bracho
+// Course: CS-210
+
 #include "ShopTracker.h"
 
 
