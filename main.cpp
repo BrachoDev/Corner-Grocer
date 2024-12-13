@@ -3,10 +3,14 @@
 using namespace std;
 
 int main() {
-    ShopTracker ShopTracker;
-    ShopTracker.loadFromFile("inventory.txt");  // Load items from the input file
 
-    // Call the menu directly from the InventoryApp class
+    // Creating an instance of the ShopTracker class
+    ShopTracker ShopTracker;
+
+    // Loading the item data from the input file
+    ShopTracker.loadFromFile("inventory.txt");
+
+    // Display the menu for user interaction
     ShopTracker.showMenu(); 
 
     return 0;
