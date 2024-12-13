@@ -1,29 +1,26 @@
-#ifndef SHOP_TRACKER_H
-#define SHOP_TRACKER_H
+#ifndef INVENTORY_APP_H
+#define INVENTORY_APP_H
 
 #include <iostream>
-#include<map>
-using namespace std;
+#include <map>
+#include <fstream>
+#include <string>
+#include <sstream>
+#include <algorithm>
+#include <limits>
 
 class ShopTracker {
-
 private:
-    // Map to store item names and their frequencies 
-    map<string, int> items;
+    std::map<std::string, int> items;  // Map to store item names and their frequencies
 
 public:
-    // Constructor:
     ShopTracker();
-
-    // Methods:
-    
-    void loadFromFile(string filename); // Loads the data from the inventory.txt file
-    int getFrequency(string item); //This returns the frequency of an specific item
-    void showMenu(); // Displays a menu to the user
-
-
-
-
+    void loadFromFile(const std::string& filename);  // Loads item data from the input file
+    void saveToFile(const std::string& filename);   // Saves item frequencies to a backup file
+    int getFrequency(const std::string& item);      // Returns frequency of a specific item
+    void displayAllItems();                        // Displays all items with their frequencies
+    void displayHistogram();                       // Displays histogram of item frequencies
+    void showMenu();                               // Display the menu
 };
 
 #endif
